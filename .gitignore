@@ -1,9 +1,26 @@
-.venv/
+# Python
 __pycache__/
 *.pyc
-.DS_Store
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+*/venv/
+*/.venv/
+
+# Environment variables
 .env
-.venv
-*.egg-info/
-dist/
-build/
+.env.*
+
+# ML artifacts
+*.pkl
+*.joblib
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

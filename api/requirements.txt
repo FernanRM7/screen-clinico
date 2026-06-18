@@ -1,2 +1,9 @@
+pandas
+numpy
+scikit-learn
+xgboost
+shap
+imbalanced-learn
+joblib
 flask>=3.0.0
 flask-cors>=5.0.0
