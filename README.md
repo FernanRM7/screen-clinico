@@ -1,21 +1,19 @@
 # Screen Clínico
 
-Proyecto de predicción de diabetes con Flask API + Streamlit frontend.
+Aplicación con backend en Flask y frontend en Streamlit.
 
-## Requisitos
+### Instalación
 
-- Python 3.10+
-- pip
-
-## Instalación
+Para preparar el entorno de desarrollo automáticamente (requiere Python instalado):
 
 ```bash
-pip install -r requirements.txt
+chmod +x setup.sh
+./setup.sh
 ```
 
-## Ejecución
+### Ejecución
 
-El script `run.sh` levanta ambos servidores:
+Para levantar ambos servicios a la vez:
 
 ```bash
 chmod +x run.sh
@@ -23,32 +21,39 @@ chmod +x run.sh
 ```
 
 Esto inicia:
-- **Flask API** en `http://127.0.0.1:5001`
-- **Streamlit** en `http://localhost:8501`
+- **Flask API** (Backend)
+- **Streamlit** (Frontend)
 
-También se pueden ejecutar por separado:
+### Limpieza
+
+Para eliminar archivos temporales y de caché generados por Python:
 
 ```bash
-# Terminal 1 - API
-cd api && source .venv/bin/activate && python test.py
-
-# Terminal 2 - Frontend
-streamlit run frontend/app.py
+./clean.sh
 ```
 
-## Estructura
+Si deseas también eliminar los entornos virtuales de backend y frontend:
+
+```bash
+./clean.sh --venv
+```
+
+### Estructura del proyecto
 
 ```
 .
-├── api/            # Flask API
-│   ├── test.py
-│   └── requirements.txt
-├── frontend/       # Streamlit app
-│   ├── app.py
-│   └── requirements.txt
-├── data/           # Datasets
-├── model/          # Modelos entrenados
-├── notebook/       # Notebooks de análisis
-├── requirements.txt
-└── run.sh
+├── api/                  # Backend Flask
+│   ├── .venv/            # (Generado automáticamente)
+│   ├── requirements.txt
+│   └── test.py
+├── frontend/             # Frontend Streamlit
+│   ├── .venv/            # (Generado automáticamente)
+│   ├── requirements.txt
+│   └── app.py
+├── data/                 # Datasets
+├── model/                # Modelos entrenados
+├── notebook/             # Notebooks de análisis
+├── clean.sh              # Script de limpieza
+├── run.sh                # Script de ejecución
+└── setup.sh              # Script de instalación
 ```
