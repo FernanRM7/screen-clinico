@@ -4,6 +4,6 @@ scikit-learn
 xgboost
 shap
 imbalanced-learn
-flask
-flask-cors
 joblib
+flask>=3.0.0
+flask-cors>=5.0.0
