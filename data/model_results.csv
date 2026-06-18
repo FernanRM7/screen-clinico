@@ -1,0 +1,4 @@
+Model,Best_ROC_AUC_CV,Best_Params,Time_s
+LogisticRegression,0.8423437500000001,"{'C': 0.1, 'solver': 'liblinear'}",3.0693302154541016
+RandomForest,0.9009218750000001,"{'max_depth': None, 'min_samples_split': 2, 'n_estimators': 300}",3.706223249435425
+XGBoost,0.8796875,"{'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}",6.323319673538208
